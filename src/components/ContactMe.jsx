@@ -211,14 +211,14 @@ function ContactMe({ setIsHovering, isHovering }) {
         </div>
 
         <motion.div
-          className="relative z-50 px-8 py-3   text-white font-poppins rounded-3xl sm:border-2 border border-[#575757]  bg-[#000000] overflow-hidden mt-4 text-center"
+          className="relative z-50   text-white font-poppins rounded-3xl sm:border-2 border border-[#575757]  bg-[#000000] overflow-hidden mt-4 text-center"
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
           whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
           whileTap={{ scale: 0.8, transition: { duration: 0.3 } }}
         >
           <motion.button
-            className="relative z-10"
+            className="relative z-10  px-8 py-3 "
             type="submit"
             transition={{
               type: "spring",
