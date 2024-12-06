@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes wave {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}   
+
+.wave-effect {
+  animation: wave 3s infinite linear;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.rectangle {
+
+  background: linear-gradient(to right, rgba(92, 92, 92, 0.459), rgba(0, 0, 0, 0.989), rgba(92, 92, 92, 0.468));
+ 
+}
+
