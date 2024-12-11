@@ -54,7 +54,7 @@ function AboutMe({ setIsHovering, isHovering }) {
           />
         </span>
       </div>
-      <div className="z-[30] flex flex-col h-screen w-full sm:mt-32 mt-20 space-y-10 font-poppins">
+      <div className="z-[30] flex flex-col h-screen w-full sm:mt-28 mt-4 space-y-10 font-poppins">
         <div className="flex justify-around gap-4">
           <button
             className={` sm:text-[18px] text-[15px]  flex flex-col  items-center gap-2 font-medium   ${

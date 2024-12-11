@@ -65,14 +65,13 @@ function Hero({ setIsHovering, isHovering }) {
     target: refScroll,
     offset: ["start start", "end start"],
   });
-  const banner0Y = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-  const banner1Y = useTransform(scrollYProgress, [0, 1], ["0%", "95%"]);
-  const banner2Y = useTransform(scrollYProgress, [0, 1], ["0%", "80%"]);
-  const text1Y = useTransform(scrollYProgress, [0, 1], ["0%", "1000%"]);
-  const text2Y = useTransform(scrollYProgress, [0, 1], ["0%", "1200%"]);
-  const text3Y = useTransform(scrollYProgress, [0, 1], ["0%", "350%"]);
-  const text4Y = useTransform(scrollYProgress, [0, 1], ["0%", "500%"]);
-  const text5Y = useTransform(scrollYProgress, [0, 1], ["0%", "1400%"]);
+  const banner0Y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const banner1Y = useTransform(scrollYProgress, [0, 1], ["0%", "35%"]);
+  const banner2Y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const text1Y = useTransform(scrollYProgress, [0, 1], ["0%", "350%"]);
+  const text2Y = useTransform(scrollYProgress, [0, 1], ["0%", "400%"]);
+  const text3Y = useTransform(scrollYProgress, [0, 1], ["0%", "150%"]);
+  const text4Y = useTransform(scrollYProgress, [0, 1], ["0%", "300%"]);
   return (
     <div
       className="h-[100vh] bg-black w-full flex justify-center items-center relative overflow-hidden text-white"
@@ -148,7 +147,7 @@ function Hero({ setIsHovering, isHovering }) {
       <motion.div
         className="font-poppins z-40 w-full flex justify-center mt-96 sm:space-x-8 space-x-4"
         style={{
-          y: text5Y,
+          y: text2Y,
           userSelect: "none",
         }}
       >

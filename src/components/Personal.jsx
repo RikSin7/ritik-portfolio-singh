@@ -13,7 +13,7 @@ function Personal({ setIsHovering }) {
     >
       <div className="aboutMe flex w-[90vw] md:w-[700px] sm:w-[600px]  mx-auto flex-col">
         <motion.h1
-          className="text-[#d1c3ae] sm:text-4xl text-3xl flex justify-center font-jose"
+          className="text-[#d1c3ae] sm:text-4xl text-2xl flex justify-center font-jose"
           style={{
             textShadow: "0px 0px 20px #d2af76",
           }}
@@ -34,7 +34,7 @@ function Personal({ setIsHovering }) {
           collaboration and independent problem-solving coexist harmoniously.
         </p>
         <motion.h1
-          className="text-[#d1c3ae] sm:text-4xl text-3xl flex justify-center font-jose sm:mt-12 mt-8"
+          className="text-[#d1c3ae] sm:text-4xl text-2xl flex justify-center font-jose sm:mt-12 mt-8"
           style={{
             textShadow: "0px 0px 20px #d2af76",
           }}
@@ -76,7 +76,7 @@ function Personal({ setIsHovering }) {
           across diverse domains.
         </p>
         <motion.h1
-          className="text-[#d1c3ae] sm:text-4xl text-3xl flex justify-center font-jose sm:mt-12 mt-8"
+          className="text-[#d1c3ae] sm:text-4xl text-2xl flex justify-center font-jose sm:mt-12 mt-8"
           style={{
             textShadow: "0px 0px 20px #d2af76",
           }}
