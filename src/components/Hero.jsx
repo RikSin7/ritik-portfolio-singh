@@ -3,11 +3,11 @@ import banner_0 from "../assets/images/banner_0.png";
 import banner_1 from "../assets/images/banner_1.png";
 import banner_2 from "../assets/images/banner_2.png";
 import { motion, useScroll, useTransform } from "framer-motion";
-import resume from "../assets/images/rikResume.png";
+import resume from "../assets/images/Resume-ritik-singh-frontend-react.pdf";
 import rikBuilding from "../assets/images/rikBuilding.jpg";
 import hireMe from "../assets/images/hireMe.webp";
 
-function Hero({ setIsHovering, isHovering }) {
+function Hero({ setIsHovering }) {
   const refScroll = useRef(null);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [isMidScreen, setIsMidScreen] = useState(false);
@@ -167,7 +167,7 @@ function Hero({ setIsHovering, isHovering }) {
           >
             <motion.a
               href={resume}
-              download="My_Resume.pdf"
+              download="Resume-ritik-singh-frontend-react.pdf"
               animate={{
                 x: downloadPosition.x,
                 y: downloadPosition.y,
