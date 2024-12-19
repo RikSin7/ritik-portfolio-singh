@@ -152,6 +152,7 @@ function ContactMe({ setIsHovering, isHovering }) {
               name="name"
               placeholder="Enter your name"
               className="bg-transparent outline-none placeholder:text-[#afafaf] w-full h-full px-2 py-4 absolute -translate-y-1/2 top-1/2"
+              onFocus={() => setErrors({ ...errors, name: "" })}
             />
             {errors.name && (
               <span className="text-red-500 mt-20 -ml-8">{errors.name}</span>
@@ -181,6 +182,7 @@ function ContactMe({ setIsHovering, isHovering }) {
               name="email"
               placeholder="Enter your email"
               className="bg-transparent outline-none placeholder:text-[#afafaf] w-full h-full px-2 py-4 absolute -translate-y-1/2 top-1/2"
+              onFocus={() => setErrors({ ...errors, email: "" })}
             />
             {errors.email && (
               <span className="text-red-500 mt-20 -ml-8">{errors.email}</span>
@@ -204,6 +206,7 @@ function ContactMe({ setIsHovering, isHovering }) {
             name="message"
             placeholder="Enter your message"
             className="sm:w-[500px] w-[350px] xss:w-[300px]   outline-none px-4 py-3 rounded-lg bg-white/10 placeholder:text-[#afafaf]"
+            onFocus={() => setErrors({ ...errors, message: "" })}
           />
           {errors.message && (
             <span className="text-red-500 ml-1">{errors.message}</span>
