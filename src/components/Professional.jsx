@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import redux from "../assets/images/redux.svg";
 import framerMotion from "../assets/images/framer-motion.svg";
 import tailwind from "../assets/images/tailwind-css-2.svg";
@@ -135,13 +134,19 @@ function Professional({ setIsHovering }) {
           </motion.h1>
           <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-4  sm:mt-6  mt-4">
             <motion.div
-              className="rounded-2xl border-4 border-neutral-700 sm:p-6 p-3"
+              className="rounded-2xl border-4 border-neutral-700 sm:p-6 p-3 group"
               variants={iconVariants(2)}
               initial="initial"
               animate="animate"
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
             >
+              {/* <motion.span
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 2 }}
+                className="absolute left-1/2 -translate-x-1/2 top-0 text-sm font-light opacity-0 translate-y-2 transition-opacity duration-300 group-hover:opacity-100 group-hover:translate-y-0 after:content-['Tailwind'] after:absolute after:-top-6 after:left-1/2 after:-translate-x-1/2 after:bg-[#484848] after:text-white after:rounded-lg after:px-2 after:py-[2px] after:shadow-md after:opacity-0 group-hover:after:opacity-100 group-hover:after:translate-y-0 after:ease-jump z-50"
+              ></motion.span> */}
               <img
                 src={`${tailwind}`}
                 alt="reduxIcon"

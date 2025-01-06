@@ -4,7 +4,7 @@ import banner_1 from "../assets/images/banner_1.png";
 import banner_2 from "../assets/images/banner_2.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import resume from "../assets/images/Resume-ritik-singh-frontend-react.pdf";
-import rikBuilding from "../assets/images/rikBuilding.jpg";
+import rikBuilding from "../assets/images/rikBuilding.png";
 import hireMe from "../assets/images/hireMe.webp";
 
 function Hero({ setIsHovering }) {
