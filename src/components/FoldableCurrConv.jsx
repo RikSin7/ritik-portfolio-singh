@@ -159,7 +159,7 @@ function FoldableCurrConv({ setIsHovering, isOpenCurrConv, setIsOpenCurrConv }) 
                 damping: 10,
               }}
             >
-              {isClicked ? "currencyfusion" : "tap to see"}
+              {isClicked ? "Currencyfusion" : "tap to see"}
             </motion.p>
           </motion.div>
         )}

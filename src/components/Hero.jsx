@@ -90,7 +90,7 @@ function Hero({ setIsHovering }) {
           onMouseLeave={() => setIsHovering(false)}
           src={`${rikBuilding}`}
           alt="rikDp"
-          className="sm:w-36 sm:h-36 w-28 h-28 rounded-full object-cover brightness-75 shadow-2xl shadow-[#000000] "
+          className="sm:w-36 sm:h-36 w-28 h-28 rounded-full object-cover brightness-75 shadow-2xl shadow-[#000000]"
         />
       </motion.span>
       <motion.h2

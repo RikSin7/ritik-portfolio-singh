@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import map from "../assets/images/map.webp";
-import stopwatch from "../assets/images/StopwatchSs.png";
+import bingeBank from "../assets/images/bingebank.png";
 import {
   motion,
   useMotionValue,
@@ -8,7 +8,11 @@ import {
   useTransform,
 } from "framer-motion";
 
-function FoldableStopwatch({ setIsHovering, isOpenStopwatch, setIsOpenStopwatch }) {
+function FoldableBingeBank({
+  setIsHovering,
+  isOpenBingeBank,
+  setIsOpenBingeBank,
+}) {
   const [isFolded, setIsFolded] = React.useState(false);
   const [isClicked, setIsClicked] = React.useState(false);
   const [isDragging, setIsDragging] = useState(false);
@@ -34,10 +38,10 @@ function FoldableStopwatch({ setIsHovering, isOpenStopwatch, setIsOpenStopwatch 
   useMotionValueEvent(xDrag, "change", (currentX) => {
     if (currentX > 260) {
       setIsFolded(false);
-      setIsOpenStopwatch(true);
+      setIsOpenBingeBank(true);
     } else {
       setIsFolded(true);
-      setIsOpenStopwatch(false);
+      setIsOpenBingeBank(false);
       setIsClicked(false);
     }
   });
@@ -78,12 +82,15 @@ function FoldableStopwatch({ setIsHovering, isOpenStopwatch, setIsOpenStopwatch 
           {/* Left Section */}
           <motion.div
             className={`map-image bg-[size:300%] translate-x-full ${
-              isOpenStopwatch && isClicked && stopwatch && "border-none rounded-l-2xl"
+              isOpenBingeBank &&
+              isClicked &&
+              bingeBank &&
+              "border-none rounded-l-2xl"
             } border-r border-black shadow-2xl shadow-black`}
             style={{
               backgroundImage: `${
-                isOpenStopwatch && isClicked && stopwatch
-                  ? `url(${stopwatch})` // No gradient when currConv
+                isOpenBingeBank && isClicked && bingeBank
+                  ? `url(${bingeBank})` 
                   : `linear-gradient(to right, rgba(0, 0, 0, 0.4) 10%, transparent), url(${map})`
               }`,
               x: xLeft,
@@ -95,8 +102,8 @@ function FoldableStopwatch({ setIsHovering, isOpenStopwatch, setIsOpenStopwatch 
             className="map-image bg-[size:300%] bg-center brightness-[--brightness]"
             style={{
               backgroundImage: `${
-                isOpenStopwatch && isClicked && stopwatch
-                  ? `url(${stopwatch})` // No gradient when currConv
+                isOpenBingeBank && isClicked && bingeBank
+                  ? `url(${bingeBank})`
                   : `linear-gradient(to left, rgba(0, 0, 0, 0.3) 50%, transparent), url(${map})`
               }`,
               scaleX: centerScale,
@@ -107,12 +114,15 @@ function FoldableStopwatch({ setIsHovering, isOpenStopwatch, setIsOpenStopwatch 
           {/* Right Section */}
           <motion.div
             className={`map-image bg-[size:300%] bg-right -translate-x-full ${
-              isOpenStopwatch && isClicked && stopwatch && "border-none rounded-r-2xl"
+              isOpenBingeBank &&
+              isClicked &&
+              bingeBank &&
+              "border-none rounded-r-2xl"
             } border-l border-black shadow-2xl shadow-black`}
             style={{
               backgroundImage: `${
-                isOpenStopwatch && isClicked && stopwatch
-                  ? `url(${stopwatch})` // No gradient when currConv
+                isOpenBingeBank && isClicked && bingeBank
+                  ? `url(${bingeBank})` 
                   : `linear-gradient(to left, rgba(0, 0, 0, 0.4) 10%, transparent), url(${map})`
               }`,
               x: xRight,
@@ -159,12 +169,12 @@ function FoldableStopwatch({ setIsHovering, isOpenStopwatch, setIsOpenStopwatch 
                 damping: 10,
               }}
             >
-              {isClicked ? "timestarter" : "tap to see"}
+              {isClicked ? "BingeBank" : "tap to see"}
             </motion.p>
           </motion.div>
         )}
       </motion.div>
-      {!isOpenStopwatch && (
+      {!isOpenBingeBank && (
         <motion.div
           className={`flex cursor-grab sm:z-30 rounded-2xl bg-white/5  px-3 py-2 lg:px-4 lg:py-2 md:gap-2 gap-1 text-center justify-center lg:w-28 md:w-24 sm:w-20 items-center font-jose lg:mr-4 md:mr-5 sm:mr-4 absolute `}
           onMouseMove={handleMouseMove}
@@ -214,4 +224,4 @@ function FoldableStopwatch({ setIsHovering, isOpenStopwatch, setIsOpenStopwatch 
   );
 }
 
-export default FoldableStopwatch;
+export default FoldableBingeBank;

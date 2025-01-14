@@ -8,15 +8,15 @@ import {
 import tab1 from "../assets/images/tab1.jpg";
 import FoldableNotes from "./FoldableNotes";
 import FoldableCurrConv from "./FoldableCurrConv";
-import FoldableStopwatch from "./FoldableStopwatch";
 import arrow from "../assets/images/Arrowglowy.png";
 import FoldableNetflix from "./FoldableNetflix";
+import FoldableBingeBank from "./FoldableBingeBank";
 
 function Main({ isHovering, setIsHovering }) {
   const [isOpenNetflix, setIsOpenNetflix] = useState(false);
   const [isOpenNotes, setIsOpenNotes] = useState(false);
   const [isOpenCurrConv, setIsOpenCurrConv] = useState(false);
-  const [isOpenStopwatch, setIsOpenStopwatch] = useState(false);
+  const [isOpenBingeBank, setIsOpenBingeBank] = useState(false);
   const [positions, setPositions] = useState([
     { x: 0, y: 0 },
     { x: 0, y: 0 },
@@ -152,6 +152,7 @@ function Main({ isHovering, setIsHovering }) {
             ) : (
               <motion.a
                 href="https://nettflixed.netlify.app/"
+                target="_blank"
                 className="text-[#d1c3ae] text-[20px] sm:-left-16 flex gap-1 justify-center items-center absolute z-30 cursor-pointer md:text-[15px] md:-left-10 mdPlus:text-[23px] mdPlus:-left-16 lg:text-[20px] lg:-left-12 xl:-left-20 xl:text-[28px] xsss:-left-4 xsss:text-[16px]"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -194,7 +195,7 @@ function Main({ isHovering, setIsHovering }) {
                   }}
                   className=" font-medium text-[#d1c3ae]"
                 >
-                  Notepot: All-in-One Productivity Hub!💡
+                  Notes: All-in-One Productivity Hub!💡
                 </h1>
                 <p className="mt-2 font-normal">
                   Stay organized with this intuitive notes-taking, to-do lists,
@@ -233,7 +234,8 @@ function Main({ isHovering, setIsHovering }) {
               </motion.span>
             ) : (
               <motion.a
-                href="https://notepot.vercel.app/login"
+                href="https://notepot.vercel.app"
+                target="_blank"
                 className="text-[#d1c3ae] text-[20px] sm:-left-16 flex gap-1 justify-center items-center absolute z-30 cursor-pointer md:text-[15px] md:-left-10 mdPlus:text-[23px] mdPlus:-left-16 lg:text-[20px] lg:-left-12 xl:-left-20 xl:text-[28px] xsss:-left-4 xsss:text-[16px]"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -315,6 +317,7 @@ function Main({ isHovering, setIsHovering }) {
             ) : (
               <motion.a
                 href="https://currencyfusion.netlify.app/"
+                target="_blank"
                 className="text-[#d1c3ae] text-[20px] sm:-left-16 flex gap-1 justify-center items-center absolute z-30 cursor-pointer md:text-[15px] md:-left-10 mdPlus:text-[23px] mdPlus:-left-16 lg:text-[20px] lg:-left-12 xl:-left-20 xl:text-[28px] xsss:-left-4 xsss:text-[16px]"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -343,7 +346,7 @@ function Main({ isHovering, setIsHovering }) {
 
         <div className="flex w-full h-full justify-start  items-center flex-wrap relative xl:-mt-12">
           <AnimatePresence mode="wait">
-            {!isOpenStopwatch ? (
+            {!isOpenBingeBank ? (
               <motion.span
                 className={`absolute w-[140px] xsss:text-[12px] smMinus:w-[160px] smMinus:text-[16px]  text-wrap left-4  z-30 sm:text-[15px] sm:w-[180px] sm:-left-10 text-[14px] md:text-[13px] md:w-[150px] md:-left-7 mdPlus:text-[17px] mdPlus:w-[200px] mdPlus:-left-16 lg:-left-8 lg:text-[16px] lg:w-[180px] xl:w-[200px] xl:text-[18px] xl:-left-8 xsss:-left-1`}
                 initial={{ opacity: 0, y: -20 }}
@@ -357,11 +360,10 @@ function Main({ isHovering, setIsHovering }) {
                   }}
                   className=" font-medium text-[#d1c3ae]"
                 >
-                  Stopwatch: Never Miss a Beat. ⏳
+                  Movie & Shows: Trailers, Clips & more.🎥
                 </h1>
                 <p className="mt-2 font-normal">
-                  Need to time some-thing? It is the perfect tool to ensure you
-                  never miss a second.
+                  Step into a world of endless entertainment with this app.
                 </p>
                 <motion.span className="text-[#d1c3ae] text-[20px] sm:text-[25px] mt-2 smMinus:text-[24px] flex gap-2 lg:gap-4 md:text-[22px] xl:text-[25px]">
                   {[
@@ -396,7 +398,8 @@ function Main({ isHovering, setIsHovering }) {
               </motion.span>
             ) : (
               <motion.a
-                href="https://timestarter.netlify.app/"
+                href="https://bingebank.vercel.app/"
+                target="_blank"
                 className="text-[#d1c3ae] text-[20px] sm:-left-16 flex gap-1 justify-center items-center absolute z-30 cursor-pointer md:text-[15px] md:-left-10 mdPlus:text-[23px] mdPlus:-left-16 lg:text-[20px] lg:-left-12 xl:-left-20 xl:text-[28px] xsss:-left-4 xsss:text-[16px]"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -416,10 +419,10 @@ function Main({ isHovering, setIsHovering }) {
             )}
           </AnimatePresence>
 
-          <FoldableStopwatch
+          <FoldableBingeBank
             setIsHovering={setIsHovering}
-            isOpenStopwatch={isOpenStopwatch}
-            setIsOpenStopwatch={setIsOpenStopwatch}
+            isOpenBingeBank={isOpenBingeBank}
+            setIsOpenBingeBank={setIsOpenBingeBank}
           />
         </div>
       </div>

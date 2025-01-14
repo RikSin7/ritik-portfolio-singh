@@ -159,7 +159,7 @@ function FoldableNetflix({ setIsHovering, isOpenNetflix, setIsOpenNetflix }) {
                 damping: 10,
               }}
             >
-              {isClicked ? "nettflixed" : "tap to see"}
+              {isClicked ? "Nettflixed" : "tap to see"}
             </motion.p>
           </motion.div>
         )}
