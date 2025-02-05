@@ -203,7 +203,8 @@ function Hero({ setIsHovering }) {
           onMouseOver={() => setIsHovering(true)}
           onMouseOut={() => setIsHovering(false)}
         >
-          <motion.div
+          <motion.a
+            href="#contact-me"
             className="relative z-50 px-6 py-3 text-white font-poppins rounded-3xl sm:border-2 border border-[#575757]  bg-[#000000] overflow-hidden"
             onMouseMove={(e) => handleMouseMove(e, setHirePosition)}
             onMouseLeave={() => handleMouseLeave(setHirePosition)}
@@ -212,8 +213,7 @@ function Hero({ setIsHovering }) {
             whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
             whileTap={{ scale: 0.8, transition: { duration: 0.3 } }}
           >
-            <motion.a
-              href="#contact-me"
+            <motion.span
               className="relative z-10"
               animate={{
                 x: hirePosition.x,
@@ -226,9 +226,9 @@ function Hero({ setIsHovering }) {
               }}
             >
               Hire Me
-            </motion.a>
+            </motion.span>
             <div className="wave-effect absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#434343] to-[#101010] animate-wave"></div>
-          </motion.div>
+          </motion.a>
           <motion.span
             className="absolute top-[52px] z-50"
             initial={{ opacity: 0, y: 50 }}
