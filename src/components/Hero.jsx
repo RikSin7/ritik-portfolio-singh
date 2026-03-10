@@ -167,7 +167,7 @@ function Hero({ setIsHovering }) {
           >
             <motion.a
               href={resume}
-              download="Resume-ritik-singh-frontend-react.pdf"
+              download="Resume-Ritik-Singh-Frontend-React.pdf"
               animate={{
                 x: downloadPosition.x,
                 y: downloadPosition.y,
